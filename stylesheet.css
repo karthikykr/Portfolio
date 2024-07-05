@@ -178,7 +178,7 @@ body
     color: #0ef;
 }
 
-.about-texth4{
+.about-text h4{
     font-size: 29px;
     font-weight: 600;
     color: #fff;
@@ -197,7 +197,7 @@ body
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
     background: #000000;
 }
 
@@ -205,12 +205,20 @@ body
     text-align: center;
     font-size: 60px;
     padding-bottom: 70px;
+    background: #000000;
+}
+
+.sub-titles h1 span {
+    color:#0ef;
 }
 
 .container{
     padding: 90px;
 }
 
+.container h1 span {
+    color: #0ef;
+}
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -277,6 +285,31 @@ body
 .services-list div:hover{
     transform: translateY(-10px);
 }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading1{
+    text-align: center;
+    text-decoration: underlined;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.technical-bars .bar{
+    margin-top: 40px 0;
+}
+
 
 
 
