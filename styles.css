@@ -8,7 +8,7 @@
 }
 a{
   text-decoration: none ;
-  color:#fff;
+  color:#FEFAF6;
   transition:0.3s; 
 }
 ul{
@@ -21,7 +21,7 @@ body{
   font-family: 'Lexend', sans-serif;
   font-size:16px;
   line-height:24px; 
-  background-color:#202020;
+  background-color:#070F2B;
 }
 .container{
   width: 1170px;
@@ -44,7 +44,7 @@ body{
   left: 0;
   width: 100%;
   z-index: 99;
-  background-color: #202020;
+  background-color: #070F2B;
   padding: 5px;
 }
 
@@ -126,7 +126,7 @@ body{
   height:  300px;
   border-radius: 50%;
   overflow: hidden;
-  border: 15px solid #444444;
+  border: 15px solid #535C91;
   box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5)
 }
 profile-photo .img{
@@ -154,15 +154,17 @@ profile-photo .img{
   color:#e5e5e5;
 }
 .profile-text .social i{
-  color : #e5e5e5;
+  color : #535C91;
   font-size: 18px;
   margin-right: 10px;
   transition: 0.5s;
 }
 .profile-text .social i:hover{
-  color: #3FA2F6;
+  color: #535C91;
   transform: rotate(360deg);
 }
+
+
 
 
 
@@ -222,7 +224,7 @@ profile-photo .img{
 .btn-group .btn{
   border-color: #d5d5d5;
   color: #fff;
-  background-color: #333;
+  background-color: #535C91;
   padding:12px 25px;
   margin: 5px 0;
   margin-right: 7px;
@@ -231,7 +233,7 @@ profile-photo .img{
   box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
 }
 .btn.active{
-  border-color: #fed700;
+  border-color: #3FA2F6;
 }
 
 
