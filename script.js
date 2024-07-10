@@ -109,6 +109,14 @@ $(document).ready(function() {
       }
     });
   }
+
   
+  $(document).ready(function() {
+    $(".menu_icon").click(function() {
+        $(".header ul").slideToggle(); 
+    });
+
+    
+});
 
  

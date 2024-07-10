@@ -172,7 +172,7 @@ profile-photo .img{
 
 .about-area{
   padding-top: 130px;
-  background-color: #202020;
+  background-color: #070F2B;
 }
 .about{
   display: flex;
@@ -184,7 +184,7 @@ profile-photo .img{
   flex-basis: 60%;
 }
 .about-content h4{
-  color: #fed700;
+  color: #3FA2F6;
   font-size: 40px;
   line-height: 70px;
   text-transform: capitalize;
@@ -383,48 +383,42 @@ profile-photo .img{
 
 
 /*---------------------------Contact Me---------------------------*/
-.contact-content{
-  padding: 100px 0;
-  color: #fff;
+#contact {
+  padding: 20px;
+  background-color: #070F2B;
   text-align: center;
 }
-.contact-content .contact-title h4{
-  font-size: 40px;
-  text-transform: capitalize;
-  color: #fed700;
-  padding-bottom: 10px;
-}
-.contact-content .contact-title p{
-  padding-bottom: 20px;
-}
-.contact{
-  max-width: 700px;
-  margin: auto;
-}
-.contact input,.contact textarea{
-  width: 100%;
-  padding: 15px;
-  border: 0;
-  margin-bottom: 10px;
+
+#contact h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
 }
 
-.contact .submit{
-  width: auto;
-  background-color: #fed700;
-  padding: 10px 40px;
-  font-weight:bold ;
-  font-size: 18px;
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: #ddd;
 }
-.contact .submit:hover{
+
+.contact-links a {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-links :hover {
   transform: scale(1.1);
-  cursor: pointer;
+  color:#3FA2F6
 }
-#msg{
-  color: #fff;
-  font-size: 20px;
-  margin-top: -8px;
-  display: block;
+
+.contact-links img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
 }
+
 
 
 
