@@ -8,7 +8,7 @@
 }
 a{
   text-decoration: none ;
-  color:#FEFAF6;
+  color:#ffffff;
   transition:0.3s; 
 }
 ul{
@@ -64,7 +64,7 @@ body{
 }
 
 .logo .fa-bolt {
-  color: #3FA2F6;
+  color: #fed700;
   font-size: 19.5px;
   position: absolute; 
   top: 60%;
@@ -95,10 +95,10 @@ body{
   display: block;
 }
 .header ul li a.active{
-  color: #3FA2F6;
+  color: #fed700;
 } 
 .header ul li a:hover{
-  color:#3FA2F6;
+  color:#fed700;
 }
 .header .menu_icon{
   color:#fff;
@@ -126,7 +126,7 @@ body{
   height:  300px;
   border-radius: 50%;
   overflow: hidden;
-  border: 15px solid #535C91;
+  border: 15px solid #070F2B;
   box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5)
 }
 profile-photo .img{
@@ -147,7 +147,7 @@ profile-photo .img{
   font-size: 14px;
 }
 .profile-text h1{
-  color: #3FA2F6;
+  color: #fed700;
   font-size: 3rem; 
 }
 .profile-text p{
@@ -184,7 +184,7 @@ profile-photo .img{
   flex-basis: 60%;
 }
 .about-content h4{
-  color: #3FA2F6;
+  color: #fed700;
   font-size: 40px;
   line-height: 70px;
   text-transform: capitalize;
@@ -385,7 +385,7 @@ profile-photo .img{
 /*---------------------------Contact Me---------------------------*/
 #contact {
   padding: 20px;
-  background-color: #070F2B;
+  background-color: #fed700;
   text-align: center;
 }
 
@@ -398,8 +398,8 @@ profile-photo .img{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
-  color: #ddd;
+  font-size: 50px;
+  color: #ffffff;
 }
 
 .contact-links a {
@@ -407,6 +407,7 @@ profile-photo .img{
   justify-content: space-between;
   margin: 0 10px;
   transition: transform 0.3s ease;
+  
 }
 
 .contact-links :hover {
@@ -417,6 +418,10 @@ profile-photo .img{
 .contact-links img {
   width: 40px; /* Adjust size as needed */
   height: 40px; /* Adjust size as needed */
+}
+
+.contact-links i {
+  font-size: 100px; /* Adjust size as needed */
 }
 
 
@@ -436,6 +441,7 @@ profile-photo .img{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
   }
   .footer .message {
     font-size: 12px;
