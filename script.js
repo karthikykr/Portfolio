@@ -119,4 +119,24 @@ $(document).ready(function() {
     
 });
 
+function openLink(url) {
+  window.open(url, '_blank');
+}
+
+function updateActiveSection() {
+  var scrollPosition = $(window).scrollTop();
+  $('section').each(function () {
+      var sectionOffset = $(this).offset().top;
+      var sectionHeight = $(this).outerHeight();
+      var sectionId = $(this).attr('id');
+      
+      if (scrollPosition >= sectionOffset - 100 && scrollPosition < sectionOffset + sectionHeight - 100) {
+          $('.navbar a[href="#' + sectionId + '"]').addClass('active');
+      } else {
+          $('.navbar a[href="#' + sectionId + '"]').removeClass('active');
+      }
+  });
+}
+
+
  

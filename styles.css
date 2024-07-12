@@ -35,7 +35,7 @@ body{
 
 .header-area{
   padding:25px 0;
-  transition: padding .3s;
+  transition: padding .2s;
 }
 
 .header-area.sticky {
@@ -399,7 +399,7 @@ profile-photo .img{
   justify-content: center;
   align-items: center;
   font-size: 50px;
-  color: #ffffff;
+  
 }
 
 .contact-links a {
@@ -410,10 +410,11 @@ profile-photo .img{
   
 }
 
-.contact-links :hover {
+.contact-links a:hover {
   transform: scale(1.1);
-  color:#3FA2F6
+  color: #3FA2F6;
 }
+
 
 .contact-links img {
   width: 40px; /* Adjust size as needed */
@@ -421,7 +422,8 @@ profile-photo .img{
 }
 
 .contact-links i {
-  font-size: 50px; /* Adjust size as needed */
+  font-size: 50px;
+  color: #0e0d0d; /* Adjust size as needed */
 }
 
 
