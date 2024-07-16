@@ -188,7 +188,7 @@ profile-photo .img{
 .about-area{
   padding-top: 130px;
   background-color: #070F2B;
-}
+}visible
 .about{
   display: flex;
   justify-content: space-between;
@@ -472,7 +472,7 @@ profile-photo .img{
 
 /*-------------------- Reveal section --------------------------------------*/
 
-.reveal-visible {
+.reveal-section {
   opacity: 1;
   transform: translate(0);
 }
