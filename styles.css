@@ -47,11 +47,10 @@ body{
   background-color: #070F2B;
   padding: 5px;
 }
-.header a,
+
 .profile-photo,
 .about-content,
 .education,
-.header ul,
 .profile-text,
 .about-skills,
 .internship,
@@ -473,12 +472,10 @@ profile-photo .img{
 
 /*-------------------- Reveal section --------------------------------------*/
 
-/* .reveal-visible {
-  opacity: 1 !important;
-  transform: translate(0) !important;
-  transition: opacity 0.5s ease, transform 0.5s ease; 
+.reveal-visible {
+  opacity: 1;
+  transform: translate(0);
 }
-*/
 
 
  /*------------------- Responsive Design on small screen -------------------*/
