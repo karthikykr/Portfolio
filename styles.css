@@ -47,7 +47,7 @@ body{
   background-color: #070F2B;
   padding: 5px;
 }
-.header a,
+/* .header a,
 .profile-photo,
 .about-content,
 .education,
@@ -62,7 +62,7 @@ body{
   opacity: 0; /* Start with opacity 0 so elements are hidden */
   transform: translateY(20px); /* Move elements down slightly */
   transition: opacity 0.5s ease, transform 0.5s ease; /* Transition properties */
-}
+} */
 
 .header{
   display:flex;
@@ -473,13 +473,13 @@ profile-photo .img{
 
 /*-------------------- Reveal section --------------------------------------*/
 
-.reveal-visible {
+/* .reveal-visible {
   opacity: 1 !important;
   transform: translate(0) !important;
   transition: opacity 0.5s ease, transform 0.5s ease; /* Example transition */
 }
-
-.header a,
+ */
+/* .header a,
 .profile-photo,
 .about-content,
 .education,
@@ -491,11 +491,11 @@ profile-photo .img{
 .contact-title,
 .projects,
 .contact {
-  opacity: 0; /* Start with opacity 0 so elements are hidden */
-  transform: translateY(20px); /* Move elements down slightly */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition properties */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease; 
 }
-
+ */
 
  /*------------------- Responsive Design on small screen -------------------*/
 
