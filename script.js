@@ -46,25 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
  document.addEventListener('DOMContentLoaded', function() {
-  const revealConfig = {
-    threshold: 0.5, // Trigger when at least 50% of the element is visible
-    rootMargin: "0px", // No margin around the viewport
-    // Optional: easing, interval, distance, duration, delay
-  };
+ const revealSection = function (entries, observer) {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-  // Function to animate an element
-  const animateElement = (element, config) => {
-    const reveal = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          observer.unobserve(entry.target);
-          entry.target.classList.add('reveal-visible'); // Add class to trigger animations
-        }
-      });
-    }, config);
+        entry.target.classList.add('reveal-section');
+        observer.unobserve(entry.target);
+    });
+};
 
-    reveal.observe(element);
-  };
+const sectionObs = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.15,
+});
 
   // Elements to animate
   const elementsToAnimate = [
@@ -78,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
   elementsToAnimate.forEach(item => {
     const elements = document.querySelectorAll(item.selector);
     elements.forEach(element => {
-      animateElement(element, revealConfig); // Use global revealConfig for consistency
+      sectionObs.observe(element); // Use global revealConfig for consistency
     });
   });
 
