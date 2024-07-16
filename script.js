@@ -45,25 +45,47 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Initial content revealing with ScrollReveal.js
-  ScrollReveal({
+  document.addEventListener('DOMContentLoaded', function() {
+  const revealConfig = {
     distance: "100px",
     duration: 2000,
-    delay: 200
+    delay: 200,
+    easing: "cubic-bezier(0.5, 0, 0, 1)", // optional easing
+    interval: 100 // optional interval between items (in ms)
+  };
+
+  // Function to animate an element
+  const animateElement = (element, config) => {
+    const reveal = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          entry.target.classList.add('reveal-visible'); // add a class to trigger animations
+        }
+      });
+    }, config);
+
+    reveal.observe(element);
+  };
+
+  // Elements to animate
+  const elementsToAnimate = [
+    { selector: ".header a, .profile-photo, .about-content, .education", options: { origin: "left" } },
+    { selector: ".header ul, .profile-text, .about-skills, .internship", options: { origin: "right" } },
+    { selector: ".project-title, .contact-title", options: { origin: "top" } },
+    { selector: ".projects, .contact", options: { origin: "bottom" } }
+  ];
+
+  // Initialize animations for each element
+  elementsToAnimate.forEach(item => {
+    const elements = document.querySelectorAll(item.selector);
+    elements.forEach(element => {
+      animateElement(element, { threshold: 0.5 }); // adjust threshold as needed
+    });
   });
 
-  ScrollReveal().reveal(".header a, .profile-photo, .about-content, .education", {
-    origin: "left"
-  });
-  ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship", {
-    origin: "right"
-  });
-  ScrollReveal().reveal(".project-title, .contact-title", {
-    origin: "top"
-  });
-  ScrollReveal().reveal(".projects, .contact", {
-    origin: "bottom"
-  });
+});
+
 
   // Submit form data to Google Sheets
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec';
