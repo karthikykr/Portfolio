@@ -45,13 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
   const revealConfig = {
-    distance: "100px",
-    duration: 2000,
-    delay: 200,
-    easing: "cubic-bezier(0.5, 0, 0, 1)", // optional easing
-    interval: 100 // optional interval between items (in ms)
+    threshold: 0.5, // Trigger when at least 50% of the element is visible
+    rootMargin: "0px", // No margin around the viewport
+    // Optional: easing, interval, distance, duration, delay
   };
 
   // Function to animate an element
@@ -60,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           observer.unobserve(entry.target);
-          entry.target.classList.add('reveal-visible'); // add a class to trigger animations
+          entry.target.classList.add('reveal-visible'); // Add class to trigger animations
         }
       });
     }, config);
@@ -70,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Elements to animate
   const elementsToAnimate = [
-    { selector: ".header a, .profile-photo, .about-content, .education", options: { origin: "left" } },
-    { selector: ".header ul, .profile-text, .about-skills, .internship", options: { origin: "right" } },
+    { selector: ".profile-photo, .about-content, .education", options: { origin: "left" } },
+    { selector: ".profile-text, .about-skills, .internship", options: { origin: "right" } },
     { selector: ".project-title, .contact-title", options: { origin: "top" } },
     { selector: ".projects, .contact", options: { origin: "bottom" } }
   ];
@@ -80,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
   elementsToAnimate.forEach(item => {
     const elements = document.querySelectorAll(item.selector);
     elements.forEach(element => {
-      animateElement(element, { threshold: 0.5 }); // adjust threshold as needed
+      animateElement(element, revealConfig); // Use global revealConfig for consistency
     });
   });
 
