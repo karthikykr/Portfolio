@@ -45,19 +45,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
- document.addEventListener('DOMContentLoaded', function() {
+
  const revealSection = function (entries, observer) {
     entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
 
-        entry.target.classList.add('reveal-section');
+        entry.target.classList.remove('hide-section');
         observer.unobserve(entry.target);
     });
 };
 
 const sectionObs = new IntersectionObserver(revealSection, {
     root: null,
-    threshold: 0.15,
+    threshold: 0.60,
 });
 
   // Elements to animate
@@ -76,7 +76,7 @@ const sectionObs = new IntersectionObserver(revealSection, {
     });
   });
 
-});
+
 
 
   // Submit form data to Google Sheets
