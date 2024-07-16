@@ -58,9 +58,32 @@ body{
 .contact-title,
 .projects,
 .contact {
-  opacity: 0; /* Start with opacity 0 so elements are hidden */
-  transform: translateY(20px); /* Move elements down slightly */
   transition: opacity 0.5s ease, transform 0.5s ease; /* Transition properties */
+}
+
+
+
+.about-content.hide-section,
+.education.hide-section,
+.about-skills.hide-section,
+.internship.hide-section,
+.project-title.hide-section,
+.contact-title.hide-section,
+.projects.hide-section,
+.contact.hide-section {
+  transform: translateY(100px); /* Move elements down slightly */
+  opacity: 0; /* Start with opacity 0 so elements are hidden */
+}
+
+.profile-photo.hide-section {
+  opacity: 0; /* Start with opacity 0 so elements are hidden */
+  transform: translateX(-100px); 
+}
+
+
+.profile-text.hide-section {
+  opacity: 0; /* Start with opacity 0 so elements are hidden */
+  transform: translateX(100px); /* Move elements down slightly */
 }
 
 .header{
@@ -178,8 +201,6 @@ profile-photo .img{
   color: #535C91;
   transform: rotate(360deg);
 }
-
-
 
 
 
@@ -357,6 +378,9 @@ profile-photo .img{
 .project-title p{
   color: #e5e5e5;
 }
+
+
+
 .projects{
   display: flex;
   justify-content:space-between;
@@ -472,10 +496,7 @@ profile-photo .img{
 
 /*-------------------- Reveal section --------------------------------------*/
 
-.reveal-section {
-  opacity: 1;
-  transform: translate(0);
-}
+
 
 
  /*------------------- Responsive Design on small screen -------------------*/
