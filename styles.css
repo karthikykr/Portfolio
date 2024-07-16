@@ -47,6 +47,22 @@ body{
   background-color: #070F2B;
   padding: 5px;
 }
+.header a,
+.profile-photo,
+.about-content,
+.education,
+.header ul,
+.profile-text,
+.about-skills,
+.internship,
+.project-title,
+.contact-title,
+.projects,
+.contact {
+  opacity: 0; /* Start with opacity 0 so elements are hidden */
+  transform: translateY(20px); /* Move elements down slightly */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition properties */
+}
 
 .header{
   display:flex;
@@ -461,6 +477,23 @@ profile-photo .img{
   opacity: 1;
   transform: translate(0);
   transition: opacity 0.5s ease, transform 0.5s ease; /* Example transition */
+}
+
+.header a,
+.profile-photo,
+.about-content,
+.education,
+.header ul,
+.profile-text,
+.about-skills,
+.internship,
+.project-title,
+.contact-title,
+.projects,
+.contact {
+  opacity: 0; /* Start with opacity 0 so elements are hidden */
+  transform: translateY(20px); /* Move elements down slightly */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition properties */
 }
 
 
