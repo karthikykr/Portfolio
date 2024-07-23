@@ -117,10 +117,6 @@ body{
   margin-right: 10px; 
 }
 
-.header ul li:first-child {
-  margin-right: auto; 
-}  
-
 .header ul{
   display: flex;
   align-items: center; 
@@ -539,18 +535,21 @@ body{
 
   .header .menu_icon {
     display: block;
-    position: relative;
   }
 
   .header ul{
-    display: none;
+  
     flex-direction: column;
-   
-    
-
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    top: 50px;
+    text-align:center;
   }
   .header i{
     color: #e5e5e5;
+    
+
   }
 
   .profile-text{
