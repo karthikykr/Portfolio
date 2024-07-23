@@ -77,34 +77,24 @@ const sectionObs = new IntersectionObserver(revealSection, {
   });
 
 
-
-
-  // Submit form data to Google Sheets
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec';
-  const form = document.forms['submitToGoogleSheet'];
-  const msg = document.getElementById("msg");
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(function(response) {
-        msg.innerHTML = "Message sent successfully";
-        setTimeout(function() {
-          msg.innerHTML = "";
-        }, 5000);
-        form.reset();
-      })
-      .catch(function(error) {
-        console.error('Error!', error.message);
-      });
-  });
-
-  // Toggle mobile menu
-  document.querySelector(".menu_icon").addEventListener('click', function() {
-    document.querySelector(".header ul").classList.toggle("show");
-  });
-
+  
+  
 });
+
+
+// Toggle mobile menu
+function toggleMenu() {
+const navLinks = document.querySelector('.navbar');
+ navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+}
+
+
+
+
+
+
+
+
 
 // Function to update active section in navigation based on scroll position
 function updateActiveSection() {
