@@ -58,7 +58,7 @@ body{
 .contact-title,
 .projects,
 .contact {
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transition properties */
+  transition: opacity 0.2s ease, transform 0.2s ease; /* Transition properties */
 }
 
 
@@ -535,21 +535,21 @@ body{
 
   .header .menu_icon {
     display: block;
+    
   }
-
+   
   .header ul{
-  
-    flex-direction: column;
+    flex-direction: row;
     position:fixed;
     width: 100%;
-    height: 100vh;
+    padding: 0;
+    margin-left: 1px;
+    height: 8vh;
     top: 50px;
     text-align:center;
   }
   .header i{
     color: #e5e5e5;
-    
-
   }
 
   .profile-text{
